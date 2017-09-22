@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Forms from './containers/Forms';
+import Result from './containers/Result';
+
 
 class App extends Component {
-  render() {
-    return (
-      <form className = "form-horizontal">
-      <div className = "form-group">
-      <label> Hours</label>
-      <input />
-      </div>
-      <div className = "form-group">
-      <label> date</label>
-      <input />
-      </div>
-      <div className = "form-group">
-      <label> leaves</label>
-      <input />
-      </div>
-      <button type="submit" className="btn btn-secondary"> submit </button>
-      </form >
-    );
-  }
+
+
+
+render(){
+  return (
+  <div>
+  <Forms />
+  <Result />
+  </div>
+);
+}
+
 }
 
 export default App;
