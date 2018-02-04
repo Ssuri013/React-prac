@@ -2,9 +2,16 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { selectBook } from "../actions/index";
 import { bindActionCreators } from "redux";
-
+import axios from 'axios';
 class BookList extends Component {
   renderList() {
+    axios.get('https://www.googleapis.com/books/v1/volumes?q=javascript')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
     return this.props.books.map(book => {
       return (
         <li
